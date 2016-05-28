@@ -7,7 +7,7 @@
 (package-initialize)
 
 ;; custom file location
-(setq custom-file "~/.emacs.d/my-custom-theme.el")
+(setq custom-file "~/.emacs.d/lisp/my-custom-theme.el")
 (load custom-file)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
