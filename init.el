@@ -29,8 +29,6 @@
   kept-old-versions 2
   version-control t)
 
-(add-hook 'after-init-hook 'global-company-mode)
-
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 
 ;; start emacs server

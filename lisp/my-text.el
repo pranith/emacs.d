@@ -1,5 +1,4 @@
 ;; Setup text mode
-(linum-mode 1)
 (add-hook 'text-mode-hook '(lambda() (auto-fill-mode 1)))
 (add-hook 'text-mode-hook '(lambda() (setq fill-column 78)))
 
