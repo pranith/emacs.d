@@ -19,6 +19,7 @@
 (require 'my-mail)
 (require 'my-git)
 (require 'my-text)
+(require 'my-prog)
 
 ;; create backups
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -28,6 +29,8 @@
   kept-old-versions 2
   version-control t)
 
+(add-hook 'after-init-hook 'global-company-mode)
+
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 
 ;; start emacs server
@@ -35,4 +38,3 @@
 
 ;; Add final message so using C-h l I can see if .emacs failed
 (message ".emacs loaded successfully.")
-
