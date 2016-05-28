@@ -5,7 +5,6 @@
 (require 'nlinum)
 
 (setq irony-mode 1)
-(linum-mode 1)
 
 (add-to-list 'company-backends 'company-c-headers)
 (add-hook 'after-init-hook 'global-company-mode)
@@ -35,11 +34,13 @@
 
 (semantic-mode 1)
 
+(global-linum-mode t)
+(column-number-mode t)
 ;; add line numbers
-(add-hook 'prog-mode-hook 'linum-mode)
-(defun linum-format-func (line)
-  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-     (propertize (format (format "%%%dd " w) line) 'face 'linum)))
-(setq linum-format 'linum-format-func)
+;;(add-hook 'prog-mode-hook 'linum-mode)
+;;(defun linum-format-func (line)
+;;  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+;;     (propertize (format (format "%%%dd " w) line) 'face 'linum)))
+;;(setq linum-format 'linum-format-func)
 
 (provide 'my-prog)
