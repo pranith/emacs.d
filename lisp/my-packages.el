@@ -13,10 +13,6 @@
 ;; sr-speedbar for source tree traversal
 ;; (require 'sr-speedbar)
 
-;; evil-mode - Thanks for all the fish, Vim!
-(require 'evil)
-(evil-mode 1)
-
 ;; save last line
 (setq save-place-file "~/.emacs.d/saved-places")
 (require 'saveplace)

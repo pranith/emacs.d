@@ -7,7 +7,7 @@
 
 (global-set-key (kbd "M-i") 'helm-swoop)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-x m") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
@@ -18,8 +18,6 @@
       helm-ff-search-library-in-sexp        t ; search for lib in `require', `declare-function' sexp.
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t)
-
-(helm-mode 1)
 
 (setq
  helm-gtags-ignore-case t
@@ -38,11 +36,14 @@
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
 
+;; key bindings
 (define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
-(define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
-(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-c C-j") 'helm-gtags-select)
+(define-key helm-gtags-mode-map (kbd "C-c M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "C-c M-,") 'helm-gtags-pop-stack)
 (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+(helm-mode 1)
 
 (provide 'my-helm)

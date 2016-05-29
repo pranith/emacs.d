@@ -3,6 +3,7 @@
 (require 'company)
 (require 'semantic)
 (require 'nlinum)
+(require 'sr-speedbar)
 
 (setq irony-mode 1)
 
@@ -36,11 +37,17 @@
 
 (global-linum-mode t)
 (column-number-mode t)
-;; add line numbers
-;;(add-hook 'prog-mode-hook 'linum-mode)
-;;(defun linum-format-func (line)
-;;  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-;;     (propertize (format (format "%%%dd " w) line) 'face 'linum)))
-;;(setq linum-format 'linum-format-func)
+
+(setq sr-speedbar-right-side nil)
+(setq sr-speedbar-skip-other-window-p t)
+(setq sr-speedbar-auto-refresh t)
+;; (setq sr-speedbar-max-width-x 20)
+;; (setq sr-speedbar-width 20)
+
+;; regular speedbar config
+(setq speedbar-show-unknown-files t)
+(setq speedbar-verbosity-level 0)
+
+(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
 (provide 'my-prog)

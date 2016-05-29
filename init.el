@@ -1,4 +1,4 @@
-;; default load path for el files
+; default load path for el files
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -20,6 +20,11 @@
 (require 'my-git)
 (require 'my-text)
 (require 'my-prog)
+(require 'my-irc)
+
+;; evil-mode - Thanks for all the fish, Vim!
+(require 'evil)
+(evil-mode 1)
 
 ;; create backups
 (setq backup-directory-alist `(("." . "~/.saves")))
