@@ -10,7 +10,11 @@
 (setq custom-file "~/.emacs.d/lisp/my-custom-theme.el")
 (load custom-file)
 
+(setq load-prefer-newer t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
 
 (require 'my-packages)
 (require 'my-helm)
