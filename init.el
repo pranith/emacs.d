@@ -25,6 +25,7 @@
 (require 'my-text)
 (require 'my-prog)
 (require 'my-irc)
+(require 'my-gdb)
 
 ;; evil-mode - Thanks for all the fish, Vim!
 (require 'evil)
