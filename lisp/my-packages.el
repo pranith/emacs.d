@@ -16,6 +16,6 @@
 ;; save last line
 (setq save-place-file "~/.emacs.d/saved-places")
 (require 'saveplace)
-(setq-default save-place t)
+(setq-default save-place-mode t)
 
 (provide 'my-packages)

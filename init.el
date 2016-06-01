@@ -42,7 +42,7 @@
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 
 ;; start emacs server
-;; (server-start)
+(server-start)
 
 ;; Add final message so using C-h l I can see if .emacs failed
 (message ".emacs loaded successfully.")
