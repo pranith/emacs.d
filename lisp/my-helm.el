@@ -1,5 +1,6 @@
 (require 'helm)
 (require 'helm-config)
+(require 'helm-ag)
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
@@ -45,6 +46,8 @@
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
 (define-key helm-gtags-mode-map (kbd "M-[") 'helm-gtags-find-rtag)
 (define-key helm-gtags-mode-map (kbd "M-]") 'helm-gtags-find-symbol)
+
+(global-set-key (kbd "M-s s")   'helm-ag)
 
 (setq helm-gtags-auto-update t)
 

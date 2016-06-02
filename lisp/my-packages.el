@@ -6,7 +6,6 @@
 (package-initialize)
 
 (require 'color-theme-sanityinc-solarized)
-
 (require 'yasnippet)
 (yas-global-mode 1)
 

@@ -7,6 +7,7 @@
 
 (setq ispell-program-name "aspell")
 (setq ispell-dictionary "english")
+(setq flyspell-mode t)
 
 (add-hook 'text-mode-hook '(lambda() (auto-fill-mode 1)))
 (add-hook 'text-mode-hook '(lambda() (setq fill-column 72)))
