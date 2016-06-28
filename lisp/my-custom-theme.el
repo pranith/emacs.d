@@ -15,7 +15,8 @@
     (helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
  '(safe-local-variable-values
    (quote
-    ((c-hanging-braces-alist
+    ((c-tab-always-indent)
+     (c-hanging-braces-alist
       (brace-list-open)
       (brace-list-close)
       (block-close . c-snug-do-while)
