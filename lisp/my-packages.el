@@ -13,8 +13,9 @@
 ;; (require 'sr-speedbar)
 
 ;; save last line
-(setq save-place-file "~/.emacs.d/saved-places")
 (require 'saveplace)
-(setq-default save-place-mode t)
+(if (fboundp #'save-place-mode)
+   (save-place-mode +1)
+     (setq-default save-place t))
 
 (provide 'my-packages)

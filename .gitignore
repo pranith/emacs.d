@@ -1,6 +1,6 @@
 *.elc
 network-security.data
-saved-places
+places
 semanticdb
 irony
 elpa/archives
