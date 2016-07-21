@@ -82,4 +82,7 @@
 
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
 (provide 'my-prog)
