@@ -113,8 +113,8 @@
 
 ;; allow for updating mail using 'U' in the main view:
 (setq
-   mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
-   mu4e-update-interval 900)             ;; update every 15 minutes
+  mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
+  mu4e-update-interval 3600)            ;; update every 1 hr
 
 ;; something about ourselves
 (setq
