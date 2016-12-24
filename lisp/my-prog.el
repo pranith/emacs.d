@@ -4,6 +4,7 @@
 (require 'semantic)
 (require 'nlinum)
 (require 'sr-speedbar)
+(require 'highlight-indent-guides)
 
 (setq irony-mode 1)
 
@@ -13,6 +14,8 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'c++-mode-hook 'company-mode)
 (add-hook 'c-mode-hook 'company-mode)
+(add-hook 'c++-mode-hook 'highlight-indent-guides)
+(add-hook 'c-mode-hook 'highlight-indent-guides)
 
 (setq company-backends (delete 'company-semantic company-backends))
 (define-key c-mode-map  [(tab)] 'company-complete)
