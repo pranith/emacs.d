@@ -14,8 +14,10 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'c++-mode-hook 'company-mode)
 (add-hook 'c-mode-hook 'company-mode)
-(add-hook 'c++-mode-hook 'highlight-indent-guides)
-(add-hook 'c-mode-hook 'highlight-indent-guides)
+
+(add-hook 'c-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'character)
 
 (setq company-backends (delete 'company-semantic company-backends))
 (define-key c-mode-map  [(tab)] 'company-complete)
