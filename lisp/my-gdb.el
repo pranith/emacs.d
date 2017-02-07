@@ -7,4 +7,7 @@
   (set-window-dedicated-p window nil))
 (ad-activate 'gdb-set-window-buffer)
 
+(setq comint-scroll-to-bottom-on-input t)
+(setq comint-scroll-to-bottom-on-output t)
+
 (provide 'my-gdb)

@@ -5,7 +5,7 @@
       '(("oftc"
          :host "irc.oftc.net"
          :port (6667)
-         :nick "pranith"
+         :nick "justreading"
          :channels ("#linux-rt" "#kernelnewbies" "#qemu" "#qsim" "#qemu-gsoc" "#qemu-mttcg")
          :nickserv-password ,oftc-password)))
 

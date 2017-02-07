@@ -140,14 +140,15 @@
 ;; Set default directory when viewing messages
 (defvar my-mailing-list-dir-mapping
   '( ("qemu-devel" . "~/devops/code/qemu/")
-     ("kvmarm" . "~/kernel/linux/")
-     ("linux-kernel" . "~/kernel/linux")
-     ("kvm" . "~/kernel/linux/") )
+     ("kvmarm" . "~/linux")
+     ("linux-kernel" . "~/linux")
+     ("kvm" . "~/linux/") )
   "Mapping from mailing lists to source tree.")
 
 (defvar my-mail-address-mapping
   ' ( ("qemu-devel@nongnu.org" . "~/devops/code/qemu/")
-      ("kvmarm@lists.cs.columbia.edu" . "~/kernel/linux/") )
+      ("kvmarm@lists.cs.columbia.edu" . "~/linux/")
+      ("linux-kernel@vger.kernel.org" . "~/linux/") )
     "Mapping from target address to source tree.
 Useful for replies and drafts")
 
@@ -174,7 +175,7 @@ Useful for replies and drafts")
       "~"))))
 
 (defun my-set-view-directory ()
-  "Switch the `default-directory' depending mail contents."
+  "Switch the `default-directory' depending on mail contents."
   (interactive)
   (when (mu4e-message-at-point t)
     (setq default-directory (my-get-code-dir-from-email))))
