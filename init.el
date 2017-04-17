@@ -46,5 +46,9 @@
 ;; start emacs server
 (server-start)
 
+;; open log file
+(setq inhibit-startup-screen t)
+(find-file "/home/pranith/devops/Dropbox/research/work/diary.org")
+
 ;; Add final message so using C-h l I can see if .emacs failed
 (message ".emacs loaded successfully.")
