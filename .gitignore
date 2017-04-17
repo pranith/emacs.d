@@ -3,6 +3,5 @@ network-security.data
 places
 semanticdb
 irony
-elpa/archives
-elpa/gnupg
+elpa
 auto-save-list/
