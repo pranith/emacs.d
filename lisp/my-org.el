@@ -12,6 +12,6 @@
 (openwith-mode t)
 (setq openwith-associations '(("\\.pdf\\'" "evince" (file))))
 
-(define-key global-map "\C-cd" (lambda () (interactive) (switch-to-buffer "diary.org")))
+(define-key global-map "\C-cd" (lambda () (interactive) (switch-to-buffer "diary.md")))
 
 (provide 'my-org)
