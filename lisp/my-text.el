@@ -10,7 +10,7 @@
 (setq flyspell-mode t)
 
 (add-hook 'text-mode-hook '(lambda() (auto-fill-mode 1)))
-(add-hook 'text-mode-hook '(lambda() (setq fill-column 80)))
+(add-hook 'text-mode-hook '(lambda() (setq fill-column 75)))
 
 (setq auto-save-timeout 2000)
 
