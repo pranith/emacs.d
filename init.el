@@ -48,8 +48,6 @@
 
 ;; open log file
 (setq inhibit-startup-screen t)
-(find-file "/home/pranith/devops/Dropbox/research/work/diary.md")
-(define-key global-map "\C-cd" (lambda () (interactive) (switch-to-buffer "diary.md")))
 
 ;; Add final message so using C-h l I can see if .emacs failed
 (message ".emacs loaded successfully.")
