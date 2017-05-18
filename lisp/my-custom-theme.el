@@ -14,11 +14,11 @@
  '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
  '(custom-safe-themes
    (quote
-    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
+    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(fci-rule-color "#073642")
  '(package-selected-packages
    (quote
-    (highlight-indent-guides color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
+    (flycheck-checkpatch dracula-theme langtool highlight-indent-guides color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
  '(safe-local-variable-values
    (quote
     ((c-tab-always-indent)

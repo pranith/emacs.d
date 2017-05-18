@@ -94,4 +94,7 @@
 (with-eval-after-load 'evil
   (defalias #'forward-evil-word #'forward-evil-symbol))
 
+(eval-after-load 'flycheck
+  '(flycheck-checkpatch-setup))
+
 (provide 'my-prog)
