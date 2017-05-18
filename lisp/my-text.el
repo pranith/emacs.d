@@ -37,4 +37,8 @@
 (global-set-key "\C-x4n" 'langtool-goto-next-error)
 (global-set-key "\C-x4p" 'langtool-goto-previous-error)
 (global-set-key "\C-x44" 'langtool-show-message-at-point)
+
+(require 'flycheck-vale)
+(flycheck-vale-setup)
+
 (provide 'my-text)

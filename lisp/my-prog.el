@@ -5,6 +5,9 @@
 (require 'nlinum)
 (require 'sr-speedbar)
 (require 'highlight-indent-guides)
+(require 'flycheck)
+
+(global-flycheck-mode)
 
 (setq irony-mode 1)
 
@@ -94,7 +97,9 @@
 (with-eval-after-load 'evil
   (defalias #'forward-evil-word #'forward-evil-symbol))
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (eval-after-load 'flycheck
-  '(flycheck-checkpatch-setup))
+ '(add-hook 'flycheck-mode-hook #'flycheck-checkpatch-setup))
 
 (provide 'my-prog)

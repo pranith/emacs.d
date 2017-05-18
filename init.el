@@ -13,6 +13,7 @@
 (load custom-file)
 
 (setq load-prefer-newer t)
+(add-to-list 'load-path "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'auto-compile)
 (auto-compile-on-load-mode)
