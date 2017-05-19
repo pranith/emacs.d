@@ -41,4 +41,6 @@
 (require 'flycheck-vale)
 (flycheck-vale-setup)
 
+(require 'flycheck-proselint)
+
 (provide 'my-text)
