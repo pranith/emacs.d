@@ -15,9 +15,6 @@
 (setq load-prefer-newer t)
 (add-to-list 'load-path "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
 
 (require 'my-packages)
 (require 'my-helm)
@@ -30,6 +27,10 @@
 (require 'my-irc)
 (require 'my-gdb)
 (require 'my-log)
+
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
 
 ;; evil-mode - Thanks for all the fish, Vim!
 (require 'evil)
