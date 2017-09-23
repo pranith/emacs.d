@@ -18,6 +18,7 @@
 
 (require 'my-packages)
 (require 'my-helm)
+(require 'latex-tweaks)
 (require 'my-latex)
 (require 'my-org)
 (require 'my-mail)
