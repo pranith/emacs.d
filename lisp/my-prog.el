@@ -7,6 +7,15 @@
 (require 'highlight-indent-guides)
 (require 'flycheck)
 (require 'ensime)
+(require 'evil-smartparens)
+(require 'smartparens)
+
+(require 'smartparens-config)
+
+(smartparens-global-mode t)
+(add-hook 'prog-mode-hook #'evil-smartparens-mode)
+(add-hook
+ 'smartparens-enabled-hook #'evil-smartparens-mode)
 
 (global-flycheck-mode)
 
@@ -50,6 +59,9 @@
 ;; ==========================================
 ;; (optional) bind TAB for indent-or-complete
 ;; ==========================================
+(defun irony--check-parens ()
+(save-excursion
+  (if (memq (char-after) '(?\) ?\} ?\])) t nil)))
 (defun irony--check-expansion ()
 (save-excursion
   (if (looking-at "\\_>") t
@@ -64,6 +76,8 @@
             (irony--check-expansion))
        (message "complete")
        (company-complete-common))
+      ((irony--check-parens)
+       (forward-char 1))
       (t
        (message "indent")
        (call-interactively 'c-indent-line-or-region))))
