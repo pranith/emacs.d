@@ -64,11 +64,11 @@
   (if (memq (char-after) '(?\) ?\} ?\])) t nil)))
 (defun irony--check-expansion ()
 (save-excursion
-  (if (looking-at "\\_>") t
-    (backward-char 1)
+  ;(if (looking-at "\\_>") (message "\\_>")
+  ;  (backward-char 1)
     (if (looking-at "\\.") t
       (backward-char 1)
-      (if (looking-at "->") t nil)))))
+      (if (looking-at "->") t nil))))
 (defun irony--indent-or-complete ()
 "Indent or Complete"
 (interactive)
@@ -77,6 +77,7 @@
        (message "complete")
        (company-complete-common))
       ((irony--check-parens)
+       (message "End-parens")
        (forward-char 1))
       (t
        (message "indent")
