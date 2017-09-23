@@ -6,10 +6,13 @@
 (require 'sr-speedbar)
 (require 'highlight-indent-guides)
 (require 'flycheck)
+(require 'ensime)
 
 (global-flycheck-mode)
 
 (setq irony-mode 1)
+(add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+(setq smartparens-global-mode 1)
 
 (add-to-list 'company-backends 'company-c-headers)
 (add-hook 'after-init-hook 'global-company-mode)

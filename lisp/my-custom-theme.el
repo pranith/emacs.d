@@ -18,7 +18,7 @@
  '(fci-rule-color "#073642")
  '(package-selected-packages
    (quote
-    (flycheck-checkpatch dracula-theme langtool highlight-indent-guides color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
+    (smartparens evil-smartparens ensime scala-mode flycheck-checkpatch dracula-theme langtool highlight-indent-guides color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
  '(safe-local-variable-values
    (quote
     ((c-tab-always-indent)
