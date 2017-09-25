@@ -16,6 +16,10 @@
 (add-to-list 'load-path "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; evil-mode - Thanks for all the fish, Vim!
+(require 'evil)
+(evil-mode 1)
+
 (require 'my-packages)
 (require 'my-helm)
 (require 'latex-tweaks)
@@ -32,10 +36,6 @@
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
-
-;; evil-mode - Thanks for all the fish, Vim!
-(require 'evil)
-(evil-mode 1)
 
 ;; create backups
 (setq backup-directory-alist `(("." . "~/.saves")))
