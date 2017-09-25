@@ -93,7 +93,7 @@
       (beginning-of-line)
       (backward-char 1)
       (call-interactively 'c-indent-line-or-region))
-      (t (call-interactively 'newline))))
+      (t (call-interactively 'newline-and-indent))))
 (defun irony-mode-keys ()
 "Modify keymaps used by `irony-mode'."
 (local-set-key (kbd "TAB") 'irony--indent-or-complete)
