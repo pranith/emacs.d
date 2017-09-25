@@ -55,6 +55,8 @@
 (add-hook 'c-mode-hook 'flycheck-mode)
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+(eval-after-load 'flycheck
+    '(add-to-list 'flycheck-checkers 'irony))
 
 ;; ==========================================
 ;; (optional) bind TAB for indent-or-complete

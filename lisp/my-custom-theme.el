@@ -21,7 +21,9 @@
     (evil-smartparens smartparens ensime scala-mode flycheck-checkpatch dracula-theme langtool highlight-indent-guides color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
  '(safe-local-variable-values
    (quote
-    ((c-tab-always-indent)
+    ((flycheck-clang-language-standard . c++11)
+     (flycheck-gcc-language-standard . c++11)
+     (c-tab-always-indent)
      (c-hanging-braces-alist
       (brace-list-open)
       (brace-list-close)
@@ -29,6 +31,7 @@
       (substatement-open before after))
      (c-tab-always-indent . t)
      (c-default-style "linux"))))
+ '(tramp-syntax (quote default) nil (tramp))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
