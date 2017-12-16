@@ -12,7 +12,7 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-(setq helm-split-window-in-side-p           t ; open helm buffer inside current window
+(setq helm-split-window-inside-p            t ; open helm buffer inside current window
                                               ; not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when
                                               ; reaching top or bottom of source.

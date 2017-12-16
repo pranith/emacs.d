@@ -6,6 +6,7 @@
 ;; You may delete these explanatory comments.
 ;;
 ;; Distro packages: silversearcher-ag mu4e
+;; (debug-on-entry 'display-warning)
 (package-initialize)
 
 ;; custom file location
@@ -22,7 +23,6 @@
 
 (require 'my-packages)
 (require 'my-helm)
-(require 'latex-tweaks)
 (require 'my-latex)
 (require 'my-org)
 (require 'my-mail)
@@ -45,7 +45,7 @@
   kept-old-versions 2
   version-control t)
 
-(byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
+(byte-recompile-directory (expand-file-name "~/.emacs.d/lisp/") 0)
 
 ;; start emacs server
 (server-start)
