@@ -5,7 +5,7 @@
 (require 'nlinum)
 (require 'sr-speedbar)
 (require 'highlight-indent-guides)
-(require 'flycheck)
+;; (require 'flycheck)
 (require 'ensime)
 (require 'evil-smartparens)
 (require 'smartparens)
@@ -51,12 +51,12 @@
 
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
 
-(add-hook 'c++-mode-hook 'flycheck-mode)
-(add-hook 'c-mode-hook 'flycheck-mode)
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
-(eval-after-load 'flycheck
-    '(add-to-list 'flycheck-checkers 'irony))
+;; (add-hook 'c++-mode-hook 'flycheck-mode)
+;; (add-hook 'c-mode-hook 'flycheck-mode)
+;; (eval-after-load 'flycheck
+;;  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+;; (eval-after-load 'flycheck
+;;    '(add-to-list 'flycheck-checkers 'irony))
 
 ;; ==========================================
 ;; (optional) bind TAB for indent-or-complete
@@ -134,5 +134,13 @@
 
 (eval-after-load 'flycheck
  '(add-hook 'flycheck-mode-hook #'flycheck-checkpatch-setup))
+
+(defun compile-make ()
+  "Compile the project"
+  (interactive)
+  (compile "make -j8\""))
+
+(setq compilation-scroll-output 'first-error)
+(global-set-key [f4] 'compile-make)
 
 (provide 'my-prog)

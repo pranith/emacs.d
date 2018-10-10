@@ -5,7 +5,7 @@
         package-archives)
   (push '("melpa-stable" . "http://stable.melpa.org/packages/")
         package-archives)
-(package-initialize)
+;; (package-initialize)
 
 (require 'color-theme-sanityinc-solarized)
 (require 'yasnippet)
