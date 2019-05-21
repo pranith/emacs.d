@@ -18,6 +18,7 @@
     ("aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "a4df5d4a4c343b2712a8ed16bc1488807cd71b25e3108e648d4a26b02bc990b3" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(fci-rule-color "#073642")
  '(indent-tabs-mode t)
+ '(org-agenda-files (quote ("~/logs/diary.org")))
  '(package-selected-packages
    (quote
     (ac-clang auto-complete-clang flycheck-vale highlight-indent-guides evil-smartparens smartparens ensime scala-mode flycheck-checkpatch dracula-theme langtool color-theme-sanityinc-tomorrow openwith flycheck-rust cargo rust-mode markdown-mode+ writegood-mode helm-ag auto-compile sr-speedbar helm-circe circe nlinum company-c-headers wc-mode helm-gtags ggtags company-irony-c-headers company-irony flycheck-irony flycheck markdown-mode yasnippet evil-magit magit use-package helm-mu flymake auctex helm evil color-theme-sanityinc-solarized)))
