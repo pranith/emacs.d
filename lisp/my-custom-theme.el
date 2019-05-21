@@ -34,7 +34,7 @@
       (substatement-open before after))
      (c-tab-always-indent . t)
      (c-default-style "linux"))))
- '(tramp-syntax (quote (quote nil) default))
+ '(tramp-syntax (quote (quote nil) default) nil (tramp))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
