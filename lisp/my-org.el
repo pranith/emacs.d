@@ -18,6 +18,8 @@
 (setq org-tag-alist '(("important" . ?i)
 		      ("urgent"    . ?u)))
 
+; Add tags to TODOs using C-c C-c
+; Search for tags using C-C a
 (setq org-agenda-custom-commands
    '(("1" "Q1" tags-todo "+important+urgent")
      ("2" "Q2" tags-todo "+important-urgent")
