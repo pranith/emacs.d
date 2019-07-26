@@ -43,4 +43,6 @@
 
 (require 'flycheck-proselint)
 
+(delete-selection-mode 1)
+
 (provide 'my-text)
