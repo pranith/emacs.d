@@ -22,12 +22,12 @@
 (setq load-prefer-newer t)
 (add-to-list 'load-path "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'my-packages)
 
 ;; evil-mode - Thanks for all the fish, Vim!
 (require 'evil)
 (evil-mode 1)
 
-(require 'my-packages)
 (require 'my-helm)
 (require 'my-latex)
 (require 'my-org)
@@ -38,7 +38,7 @@
 ; (require 'my-irc)
 (require 'my-gdb)
 (require 'my-log)
-(require 'my-vg)
+;(require 'my-vg)
 
 (require 'auto-compile)
 (auto-compile-on-load-mode)

@@ -30,8 +30,8 @@
    (save-place-mode +1)
      (setq-default save-place t))
 
-(use-package ensime
- :ensure t
- :pin melpa-stable)
+;(use-package ensime
+; :ensure t
+; :pin melpa-stable)
 
 (provide 'my-packages)

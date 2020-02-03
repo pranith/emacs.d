@@ -6,7 +6,7 @@
 (require 'sr-speedbar)
 (require 'highlight-indent-guides)
 ;; (require 'flycheck)
-(require 'ensime)
+;; (require 'ensime)
 (require 'evil-smartparens)
 (require 'smartparens)
 
