@@ -35,7 +35,7 @@
 (require 'my-git)
 (require 'my-text)
 (require 'my-prog)
-; (require 'my-irc)
+(require 'my-irc)
 (require 'my-gdb)
 (require 'my-log)
 ;(require 'my-vg)
