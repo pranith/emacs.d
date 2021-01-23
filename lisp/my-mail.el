@@ -8,10 +8,7 @@
 (setq mu4e-compose-complete-addresses t)
 (setq mu4e-compose-complete-only-personal t)
 (setq mu4e-html2text-command "html2text -utf8 -width 72")
-(setq mu4e-user-mail-address-list '("bobby.prani@gmail.com"
-				    "pranith@gatech.edu"
-				    "pdenthumdas3@gatech.edu"
-				    "bobbyprani@gmail.com"))
+(setq mu4e-user-mail-address-list '("bobby.prani@gmail.com"))
 
 ;; don't save message to Sent Messages, Gmail/IMAP takes care of this
 (setq mu4e-sent-messages-behavior 'delete)
