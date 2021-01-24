@@ -51,6 +51,6 @@
 
 (setq helm-gtags-auto-update t)
 
-(helm-mode 1)
+(helm-mode t)
 
 (provide 'my-helm)

@@ -1,12 +1,20 @@
 (require 'package)
 (setq package-enable-at-startup nil)
-  (push '("marmalade" . "http://marmalade-repo.org/packages/")
-        package-archives )
+  ;; (push '("marmalade" . "http://marmalade-repo.org/packages/")
+  ;;       package-archives )
   (push '("melpa" . "http://melpa.org/packages/")
         package-archives)
   (push '("melpa-stable" . "http://stable.melpa.org/packages/")
         package-archives)
 (package-initialize)
+
+(setq package-selected-packages '(lsp-mode yasnippet lsp-treemacs helm-lsp
+                                  projectile hydra flycheck company avy
+                                  which-key helm-xref dap-mode lsp-ui))
+
+(when (cl-find-if-not #'package-installed-p package-selected-packages)
+   (package-refresh-contents)
+     (mapc #'package-install package-selected-packages))
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -35,3 +43,4 @@
 ; :pin melpa-stable)
 
 (provide 'my-packages)
+;;; my-packages ends here

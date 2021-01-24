@@ -1,7 +1,6 @@
 (require 'cc-mode)
 (require 'irony)
 (require 'company)
-(require 'semantic)
 (require 'nlinum)
 (require 'sr-speedbar)
 (require 'highlight-indent-guides)
@@ -9,6 +8,8 @@
 ;; (require 'ensime)
 (require 'evil-smartparens)
 (require 'smartparens)
+(require 'lsp-mode)
+(require 'lsp-ui)
 
 (require 'smartparens-config)
 
@@ -34,7 +35,6 @@
 (add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 
-(setq company-backends (delete 'company-semantic company-backends))
 (define-key c-mode-map  [(tab)] 'company-complete)
 (define-key c++-mode-map  [(tab)] 'company-complete)
 
@@ -103,11 +103,6 @@
 (local-set-key (kbd "RET") 'irony--enter-and-indent))
 (add-hook 'c-mode-common-hook 'irony-mode-keys)
 
-(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 1)
-
-(semantic-mode 1)
-
 (global-linum-mode t)
 (column-number-mode t)
 
@@ -143,4 +138,31 @@
 (setq compilation-scroll-output 'first-error)
 (global-set-key [f4] 'compile-make)
 
+(require 'helm-xref)
+(define-key global-map [remap find-file] #'helm-find-files)
+(define-key global-map [remap execute-extended-command] #'helm-M-x)
+(define-key global-map [remap switch-to-buffer] #'helm-mini)
+
+(which-key-mode)
+(add-hook 'c-mode-hook #'lsp)
+(add-hook 'c++-mode-hook #'lsp)
+
+(define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+(define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
+
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024)
+      treemacs-space-between-root-nodes nil
+      company-idle-delay 0.0
+      company-minimum-prefix-length 1
+      lsp-idle-delay 0.1 ;; clangd is fast
+      ;; be more ide-ish
+      lsp-headerline-breadcrumb-enable t)
+
+(with-eval-after-load 'lsp-mode
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+  (require 'dap-cpptools)
+  (yas-global-mode))
+
 (provide 'my-prog)
+
